@@ -1,0 +1,11 @@
+<h1>Lista de Tarefas</h1>
+
+ <ul>    
+
+{% for prova in prova_list %}  
+     
+<li>{{ prova.title }} -{{ prova.matricula }} - {{ prova.deadline }}</li>    
+
+{% endfor %} 
+
+</ul> <a href="{% url 'prova_create' %}">Criar Nova Tarefa</a>
