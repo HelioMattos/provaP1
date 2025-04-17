@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from provas.views import ProvaCreateView, ProvaListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', ProvaListView.as_view(), name='prova_list'),
+    path('create/', ProvaCreateView.as_view(), name='prova_create')
+    
 ]
